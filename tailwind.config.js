@@ -4,5 +4,30 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          padding: '0px 15px',
+          '@screen sm': {
+            maxWidth: '560px',
+            margin:'auto',
+          },
+          '@screen md': {
+            maxWidth: '740px',
+          },
+          '@screen lg': {
+            maxWidth: '960px',
+          },
+            '@screen xl': {
+              maxWidth: '1170px',
+            },
+            '@screen 2xl': {
+              maxWidth: '1170px',
+            },
+        }
+      })
+    }
+  ],
 }
