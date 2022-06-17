@@ -4,7 +4,12 @@ module.exports = {
   theme: {
     extend: {},
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
+
     function ({ addComponents }) {
       addComponents({
         '.container': {
@@ -28,6 +33,6 @@ module.exports = {
             },
         }
       })
-    }
+    },
   ],
 }
